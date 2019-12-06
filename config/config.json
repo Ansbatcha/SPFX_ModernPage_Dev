@@ -9,10 +9,19 @@
           "manifest": "./src/webparts/helloWorld/HelloWorldWebPart.manifest.json"
         }
       ]
+    },
+    "people-invites-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/peopleInvites/PeopleInvitesWebPart.js",
+          "manifest": "./src/webparts/peopleInvites/PeopleInvitesWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js"
+    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js",
+    "PeopleInvitesWebPartStrings": "lib/webparts/peopleInvites/loc/{locale}.js"
   }
 }
