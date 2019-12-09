@@ -6,7 +6,7 @@ import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField
 } from '@microsoft/sp-webpart-base';
-
+import { sp } from "@pnp/sp";
 import * as strings from 'PeopleInvitesWebPartStrings';
 import PeopleInvites from './components/PeopleInvites';
 import { IPeopleInvitesProps } from './components/IPeopleInvitesProps';
@@ -27,7 +27,17 @@ export default class PeopleInvitesWebPart extends BaseClientSideWebPart<IPeopleI
 
     ReactDom.render(element, this.domElement);
   }
+  public onInit(): Promise<void> {
 
+    return super.onInit().then(_ => {
+  
+      // other init code may be present
+  
+      sp.setup({
+        spfxContext: this.context
+      });
+    });
+  }
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
   }

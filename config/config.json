@@ -2,14 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "hello-world-web-part": {
-      "components": [
-        {
-          "entrypoint": "./lib/webparts/helloWorld/HelloWorldWebPart.js",
-          "manifest": "./src/webparts/helloWorld/HelloWorldWebPart.manifest.json"
-        }
-      ]
-    },
+  
     "people-invites-web-part": {
       "components": [
         {
@@ -21,7 +14,6 @@
   },
   "externals": {},
   "localizedResources": {
-    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js",
     "PeopleInvitesWebPartStrings": "lib/webparts/peopleInvites/loc/{locale}.js"
   }
 }
